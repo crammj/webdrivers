@@ -1,0 +1,8 @@
+/node_modules/
+/.idea/.gitignore
+/.idea/encodings.xml
+/eslint.config.mjs
+/.idea/jsLibraryMappings.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/webdrivers.iml
