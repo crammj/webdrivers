@@ -1,0 +1,25 @@
+// basic.test.ts
+describe('Basic Assertions', () => {
+  test('should add numbers correctly', () => {
+    expect(1 + 2).toBe(3);
+  });
+
+  test('should check object equality', () => {
+    const data = { name: 'John', age: 30 };
+    expect(data).toEqual({ name: 'John', age: 30 });
+  });
+
+  test('should check null and undefined values', () => {
+    const value = null;
+    expect(value).toBeNull();
+    expect(value).toBeDefined();
+    expect(value).not.toBeUndefined();
+    expect(value).toBeFalsy();
+  });
+
+  test('should check array membership', () => {
+    const shoppingList = ['milk', 'bread', 'eggs'];
+    expect(shoppingList).toContain('milk');
+  });
+});
+

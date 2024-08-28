@@ -1,18 +1,15 @@
-import Chrome, { Driver } from "selenium-webdriver/chrome";
+import  Chrome from "selenium-webdriver/chrome";
+import {Browser, Builder, WebDriver} from "selenium-webdriver";
+import DriverBuilder from "../common/driver.builder";
+import HomePage from "../pages/home.page";
 
-function setup(): Driver {
-  const service = new Chrome.ServiceBuilder()
-    .loggingTo("/my/log/file.txt")
-    .enableVerboseLogging()
-    .build();
-
-  const options = new Chrome.Options();
-  // configure browser options ...
-
-  const driver = Chrome.Driver.createSession(options, service);
-
-  return driver;
+async function init() {
+    return await DriverBuilder.build();
 }
 
-const driver: Driver = setup();
-driver.get("81dojo.com");
+init().then(async (driver) => {
+    const homePage = new HomePage(driver);
+
+
+
+});
