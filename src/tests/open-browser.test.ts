@@ -19,6 +19,11 @@ afterEach(async () => {
 test("Navigate to HomePage", async () => {
   const homePage = new HomePage(driver);
   await homePage.init();
-  await homePage.login(user, pw);
-  expect(homePage.url).toBe("https://system.81dojo.com/en/");
+  const landing = await homePage.login(user, pw);
+  const homepage2 = await landing.navigateTo<HomePage>(
+    "https://system.81dojo.com/en/",
+    HomePage,
+  );
+
+  expect(homepage2.url).toBe("https://system.81dojo.com/en/");
 });
