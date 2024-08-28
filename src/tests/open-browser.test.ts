@@ -1,20 +1,24 @@
+import { WebDriver } from "selenium-webdriver";
+import dotenv from "dotenv";
 import DriverBuilder from "../common/driver.builder";
 import HomePage from "../pages/home.page";
-import {WebDriver} from "selenium-webdriver";
+
+dotenv.config();
+
 let driver: WebDriver;
+const user: string = process.env.USERNAME ?? "default_user";
+const pw: string = process.env.PW ?? "default_pw";
 
-async function init() {
+beforeEach(async () => {
   driver = await DriverBuilder.build();
-}
+});
+afterEach(async () => {
+  await driver.quit();
+});
 
-
-test("Navigate to 81dojo", () => {
-  init()
-  const homePage =  new HomePage(driver);
+test("Navigate to HomePage", async () => {
+  const homePage = new HomePage(driver);
+  await homePage.init();
+  await homePage.login(user, pw);
   expect(homePage.url).toBe("https://system.81dojo.com/en/");
 });
-
-test("Simple test examples", () => {
-  expect(1 + 2).toBe(3);
-});
-
