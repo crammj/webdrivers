@@ -4,6 +4,7 @@
     "plugin:@typescript-eslint/recommended"],
   "plugins": ["prettier","@typescript-eslint"],
   "rules": {
+    "no-return-await": ["off"],
     "prettier/prettier": ["error"],
     "import/extensions": ["error",
       "ignorePackages",
