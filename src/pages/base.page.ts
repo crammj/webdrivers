@@ -50,6 +50,10 @@ class BasePage implements Page {
     return await this.driver.getTitle();
   }
 
+  async refresh(){
+    return await this.driver.navigate().refresh();
+  }
+
   find(locator: Locator) {
     // this.waitUntilElementLocated(locator);
     return this.driver.findElement(locator);
