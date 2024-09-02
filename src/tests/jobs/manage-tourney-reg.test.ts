@@ -1,9 +1,8 @@
 //initial commit
-
 import { WebDriver } from "selenium-webdriver";
 import dotenv from "dotenv";
-import DriverBuilder from "../common/driver.builder";
-import HomePage from "../pages/home.page";
+import DriverBuilder from "../../common/driver.builder";
+import HomePage from "../../pages/home.page";
 
 dotenv.config();
 

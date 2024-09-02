@@ -2,24 +2,31 @@
   "name": "webdrivers",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "npx tsc -w -p tsconfig.build.json",
     "test": "jest",
-    "lint": "npx eslint --fix ."
+    "test:unit": "jest --testPathPattern=unit",
+    "test:e2e": "jest --testPathPattern=e2e",
+    "lint": "npx eslint --fix .",
+    "serve": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3",
     "react": "^18.3.1",
     "selenium-webdriver": "^4.23.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
     "@types/eslint__js": "^8.42.3",
+    "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
+    "@types/node-cron": "^3.0.11",
     "@types/selenium-webdriver": "^4.1.25",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
