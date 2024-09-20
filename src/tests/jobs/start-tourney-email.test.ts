@@ -1,4 +1,4 @@
-//initial commit 
+// initial commit
 
 import { WebDriver } from "selenium-webdriver";
 import dotenv from "dotenv";

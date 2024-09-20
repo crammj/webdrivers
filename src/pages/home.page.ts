@@ -1,7 +1,7 @@
 import { By, WebDriver } from "selenium-webdriver";
 import LandingPage from "./landing.page";
 import BasePage from "./base.page";
-import {URLS} from "../common/constants";
+import { URLS } from "../common/constants";
 
 class HomePage extends BasePage {
   url: string;

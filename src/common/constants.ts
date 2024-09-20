@@ -14,14 +14,16 @@ export const ErrorMessages = {
 };
 
 export const TOURNEY_COPY = {
-  DESCRIPTION: "===Bare Bones===\n" +
-      "\n" +
-      "- When the tournament begins, simply schedule a game with the person directly above you and the person directly below you in the pairing table.\n" +
-      "- To schedule a game, click on the appropriate cell in the table and message your partner your availability. You can also use the discord to coordinate. https://disboard.org/server/653255438904590372\n" +
-      "\n" +
-      "===Philosophy===\n" +
-      "In a teaching ladder, each player plays (and analyzes!) a game with a person a rank below them, and a person a rank above them. Ideally, the difference between players should be 50-200 rating points, so you learn from someone who is just on the next \"rung of the ladder\" from you.",
-  BANNER: "https://f.easyuploader.app/eu-prd/upload/20201123144819_75435955386933396d44.jpg",
+  DESCRIPTION:
+    "===Bare Bones===\n" +
+    "\n" +
+    "- When the tournament begins, simply schedule a game with the person directly above you and the person directly below you in the pairing table.\n" +
+    "- To schedule a game, click on the appropriate cell in the table and message your partner your availability. You can also use the discord to coordinate. https://disboard.org/server/653255438904590372\n" +
+    "\n" +
+    "===Philosophy===\n" +
+    'In a teaching ladder, each player plays (and analyzes!) a game with a person a rank below them, and a person a rank above them. Ideally, the difference between players should be 50-200 rating points, so you learn from someone who is just on the next "rung of the ladder" from you.',
+  BANNER:
+    "https://f.easyuploader.app/eu-prd/upload/20201123144819_75435955386933396d44.jpg",
 };
 
 export const TOURNEY_COPY_TEMPLATES = {
@@ -37,6 +39,5 @@ It's not a tournament, but a learning tool! If you choose to register please mak
 
 ${1}
 
-In club news: The club celebrates 578 members! We are very pleased to be a part of a globe-spanning friendly community of players who are enthusiastic about helping each other improve`
-
-}
+In club news: The club celebrates 578 members! We are very pleased to be a part of a globe-spanning friendly community of players who are enthusiastic about helping each other improve`,
+};

@@ -1,11 +1,11 @@
-//initial commit
+// initial commit
 
 import { WebDriver } from "selenium-webdriver";
 import dotenv from "dotenv";
 import DriverBuilder from "../../common/driver.builder";
 import HomePage from "../../pages/home.page";
 import ClubPage from "../../pages/club.page";
-import {URLS} from "../../common/constants";
+import { URLS } from "../../common/constants";
 
 dotenv.config();
 
@@ -24,13 +24,10 @@ test("Navigate to club page and accept pending requests", async () => {
   const homePage = new HomePage(driver);
   await homePage.init();
   const landing = await homePage.login(user, pw);
-  const clubPage = await landing.navigateTo<ClubPage>(
-    URLS.CLUB,
-      ClubPage,
-  );
+  const clubPage = await landing.navigateTo<ClubPage>(URLS.CLUB, ClubPage);
   await clubPage.acceptMemberRequest();
   await clubPage.refresh();
   const members = await clubPage.getInviteCount();
-
   expect(members).toBe(0);
+
 });

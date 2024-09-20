@@ -50,7 +50,7 @@ class BasePage implements Page {
     return await this.driver.getTitle();
   }
 
-  async refresh(){
+  async refresh() {
     return await this.driver.navigate().refresh();
   }
 
